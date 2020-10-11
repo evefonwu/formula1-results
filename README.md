@@ -64,7 +64,7 @@ USERNAME=postgres
 PASSWORD=yourpassword
 ```
 
-#### Create Database Objects
+#### Create database objects
 
 Open pgAdmin to create the formula1 schema, tables and index along with the views and materializaed views
 
@@ -76,7 +76,7 @@ Run server/sql/schema_views_cache.sql
 
 View schemas and tables in pgAdmin, open 'local-db', then 'dev', 'Schemas', 'formula1', 'Tables'
 
-Import data into tables from CSV files with pgAdmin with [postgresqltutorial](https://www.postgresqltutorial.com/import-csv-file-into-posgresql-table/)
+Import data into tables with pgAdmin with [postgresqltutorial](https://www.postgresqltutorial.com/import-csv-file-into-posgresql-table/)
 
 Locate data in CSV files at ./server/csv
 
@@ -116,7 +116,7 @@ npm start
 
 Import error on \N value in CSV files
 
-- Replace \N with empty string. Value null allow you for example to query for 'is not null'
+- Replace \N with empty string with Unix utility, sed. Value null allow you for example to query for 'is not null'
 
 ```bash
 sed 's/\\N//g' results.csv > ready.csv
@@ -132,7 +132,7 @@ Multiple queries and React component relationships
 
 - Current season standings for drivers and teams ?
 
-- Read/write concurrent update issues example application?
+- Read/write concurrent updates application?
 
 ## Contributing
 
