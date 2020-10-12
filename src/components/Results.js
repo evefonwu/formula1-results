@@ -37,7 +37,6 @@ function Results({ seasonsList }) {
           //console.log(data);
           const firstResult = data.resultsFrom[0];
           let title = `Formula 1 ${firstResult.name} ${firstResult.year} - Race Results`;
-          title = title.toUpperCase();
           const dateEnding = format(
             new Date(parseInt(firstResult.date)),
             "d MMMM yyyy"
@@ -46,7 +45,6 @@ function Results({ seasonsList }) {
           return (
             <div className="results">
               <div className="results-title">{title}</div>
-
               <div className="year-selection">
                 <select
                   name="season-menu"
@@ -61,7 +59,6 @@ function Results({ seasonsList }) {
                 </select>
                 <div className="results-date">{dateEnding}</div>
               </div>
-
               <ResultsTable results={data.resultsFrom} />
             </div>
           );

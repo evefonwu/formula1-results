@@ -92,6 +92,8 @@ span.constructor {
   font-weight: 500;
 }
 
+.summary-title,
+.results-title,
 span.constructor,
 td.constructor {
   text-transform: uppercase;
