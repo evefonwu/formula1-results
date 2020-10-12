@@ -58,7 +58,7 @@ Set query variables:
 Run query: 
 
 query($season: String!) {
-	resultsFrom(season: $season) {
+  resultsFrom(season: $season) {
     name        
   }
 }
