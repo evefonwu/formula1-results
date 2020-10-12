@@ -1,3 +1,4 @@
+-- all-time top 25 constructors standing by points
 select constructors.name as constructor,
      cast(sum(points) as int) as points
 from formula1.results
