@@ -1,8 +1,9 @@
 /* 
  * Based on f1bd schema http://ergast.com/schemas/f1db_schema.txt
  *  
- * - add foreign key constraints for formula1.results table
- * - add unique constraints on combination of fields, along with not null constraints to prevent duplicates eg a driver record with the same name and date of birth
+ * - add foreign key references for formula1.results table
+ * - add unique constraints on combination of fields, along with not null constraints 
+ * to prevent duplicates eg a driver record with the same name and date of birth
  * - add indexes for results query by year
  * - contain all within a single transaction ending with commit
  */
