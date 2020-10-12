@@ -1,6 +1,7 @@
 /* 
  * Based on f1bd schema http://ergast.com/schemas/f1db_schema.txt
  *  
+ * - add foreign key constraints for formula1.results table
  * - add unique constraints on combination of fields, along with not null constraints to prevent duplicates eg a driver record with the same name and date of birth
  * - add indexes for results query by year
  * - contain all within a single transaction ending with commit
@@ -52,9 +53,9 @@ drop table if exists formula1.results;
 create table formula1.results
 (
   resultId        serial primary key,
-  raceId          integer not null,
-  driverId        integer not null,
-  constructorId   integer not null,
+  raceId          integer references formula1.races(raceId),
+  driverId        integer references formula1.drivers(driverId),
+  constructorId   integer references formula1.constructors(constructorId),
   number          integer,
   grid            integer not null DEFAULT 0,
   position        integer,
